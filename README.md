@@ -39,6 +39,27 @@ Tips for setting up your environment can be found [here](https://classroom.udaci
 
 ## Project Instructions and Rubric
 
+Here is a conclusion of advantages and disadvantages of three terms of PID controller in the terms of stability, fast transient response, steady-state error and overshoot.
+
+1. Proportional Control:
+- Stability: excessively large values of Kp cause instability
+- Fast transient response: large values of Kp speed up the response 
+- Steady-state error: non-zero steady-state errors can result
+- Small overshoot: large values of Kp will cause overshoot
+
+2. Integral control
+- Stability: integral control helps stability
+- Fast transient response: the transient has to be compensated for with time-consuming overshoot
+- Steady-state error: integral control drives the steady-state error to zero
+- Small overshoot: any negative error in the transient has to be compensated for with
+overshoot
+
+3. Differential control
+- Stability: excessively large values of Kd amplify noise and cause instability
+- Fast transient response: differential control slows down the transient response
+- steady-state error: non-zero steady-state errors can result
+- Small overshoot: large values of Kd decrease overshoot
+
 The code could build and run sucessfully. PID contoller has followed the standard process.
 
 The program supports inputting arguments from command line, following  `./pid Kp Ki Kd` which enables I tune the parameters easily. I have tried several combinations with/without each part and tune the values up and down like:
