@@ -43,22 +43,28 @@ Here is a conclusion of advantages and disadvantages of three terms of PID contr
 
 1. Proportional Control:
 - Stability: excessively large values of Kp cause instability
-- Fast transient response: large values of Kp speed up the response 
+- Transient response: large values of Kp speed up the response 
 - Steady-state error: non-zero steady-state errors can result
-- Small overshoot: large values of Kp will cause overshoot
+- Overshoot: large values of Kp will cause overshoot
 
 2. Integral control
 - Stability: integral control helps stability
-- Fast transient response: the transient has to be compensated for with time-consuming overshoot
+- Transient response: the transient has to be compensated for with time-consuming overshoot
 - Steady-state error: integral control drives the steady-state error to zero
-- Small overshoot: any negative error in the transient has to be compensated for with
+- Overshoot: any negative error in the transient has to be compensated for with
 overshoot
 
 3. Differential control
 - Stability: excessively large values of Kd amplify noise and cause instability
-- Fast transient response: differential control slows down the transient response
+- Transient response: differential control slows down the transient response
 - steady-state error: non-zero steady-state errors can result
-- Small overshoot: large values of Kd decrease overshoot
+- Overshoot: large values of Kd decrease overshoot
+
+In this project, corespondingly, **Proportional** component mainly controls the proportion of CTE leading the car's steering towards the center to line.
+
+**Integral** component reduces the bias accumulated by the past - driving alone the center of line, increasing stability.
+ 
+**Differential** component helps decrease the overshoot by P component in the future tending.
 
 The code could build and run sucessfully. PID contoller has followed the standard process.
 
